@@ -1,0 +1,21 @@
+.nav {
+    padding: 15px 0;
+}
+
+.nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav__icon {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}

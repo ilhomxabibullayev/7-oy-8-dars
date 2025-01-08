@@ -7,7 +7,7 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -18,4 +18,52 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+button {
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }

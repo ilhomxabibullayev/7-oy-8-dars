@@ -1,5 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
+import './layout.css';
+import Link from "next/link";
+import Logo from '../../public/image/logo.svg';
+import Search from '../../public/icon/search.svg';
+import User from '../../public/icon/user.svg';
+import Cart from '../../public/icon/cart.svg';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +29,30 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav className="nav">
+          <div className="container nav__container">
+            <Image src={Logo}></Image>
+            <ul className="nav__list">
+              <li className="nav__item">
+                <Link className="nav__link" href='/'>Home</Link>
+              </li>
+              <li className="nav__item">
+                <Link className="nav__link" href='/shop'>Shop</Link>
+              </li>
+              <li className="nav__item">
+                <Link className="nav__link" href='/product'>Product</Link>
+              </li>
+              <li className="nav__item">
+                <Link className="nav__link" href='/contact-us'>Contact us</Link>
+              </li>
+            </ul>
+            <div className="nav__icon">
+              <Link href='/cart'><Image src={Search}></Image></Link>
+              <Link href='/cart'><Image src={User}></Image></Link>
+              <Link href='/cart'><Image src={Cart}></Image></Link>
+            </div>
+          </div>
+        </nav>
         {children}
       </body>
     </html>
