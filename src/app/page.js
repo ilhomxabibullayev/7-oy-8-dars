@@ -13,6 +13,7 @@ import Card from "@/components/Catd";
 export default async function Home() {
 
   const PRODUCTS_URL = 'http://localhost:5000/products';
+  
   const products = (await (await fetch(PRODUCTS_URL)).json()).data || [];
   console.log(products);
   
