@@ -4,13 +4,14 @@ import './Admin.css'
 
 const Page = () => {
     async function handleSubmit(event) {
-        event.preventDefolt();
+        event.preventDefault();
         const form = event.target;
         const data = new FormData(form);
         const res = await fetch('http://localhost:5000/products', {
             method: 'Post',
             body: data,
         })
+        event.target.reset();
         console.log(res);
     }
     return (
